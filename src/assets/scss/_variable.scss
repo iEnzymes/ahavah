@@ -1,0 +1,62 @@
+:root {
+  --font-family: 'Gotham Pro';
+  --primary-50: #fff;
+  --primary-100: #f2f2f2;
+  --primary-200: #d9d9d9;
+  --primary-300: #bfbfbf;
+  --primary-400: #a6a6a6;
+  --primary-500: #8c8c8c;
+  --primary-600: #737373;
+  --primary-700: #595959;
+  --primary-800: #404040;
+  --primary-900: #262626;
+  --primary-a100: #0d0d0d;
+  --primary-a200: #82ffde;
+  --primary-a400: #4fffd0;
+  --primary-a700: #36ffca;
+  --accent-50: #f5f2f0;
+  --accent-100: #e0d8d1;
+  --accent-200: #cbbdb3;
+  --accent-300: #b7a395;
+  --accent-400: #a28976;
+  --accent-500: #896f5d;
+  --accent-600: #6a5748;
+  --accent-700: #4c3e34;
+  --accent-800: #2e251f;
+  --accent-900: #0f0c0a;
+  --accent-a100: #64ffd3;
+  --accent-a200: #31ffc5;
+  --accent-a400: #00fdb5;
+  --accent-a700: #00e3a3;
+  --warn-50: #fce7eb;
+  --warn-100: #f8c3cd;
+  --warn-200: #f39bab;
+  --warn-300: #ee7389;
+  --warn-400: #ea5570;
+  --warn-500: #e63757;
+  --warn-600: #e3314f;
+  --warn-700: #df2a46;
+  --warn-800: #db233c;
+  --warn-900: #d5162c;
+  --warn-a100: #fff;
+  --warn-a200: #ffd3d7;
+  --warn-a400: #ffa0a8;
+  --warn-a700: #ff8691;
+
+  .theme-dark {
+    --primary-50: #f1eff8;
+    --primary-100: #ddd8ed;
+    --primary-200: #c7bee1;
+    --primary-300: #b0a3d5;
+    --primary-400: #9f90cc;
+    --primary-500: #8e7cc3;
+    --primary-600: #8674bd;
+    --primary-700: #7b69b5;
+    --primary-800: #715fae;
+    --primary-900: #5f4ca1;
+    --primary-a100: #fefeff;
+    --primary-a200: #d6cbff;
+    --primary-a400: #ae98ff;
+    --primary-a700: #9a7fff;
+  }
+}
