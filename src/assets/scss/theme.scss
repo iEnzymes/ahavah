@@ -50,9 +50,9 @@ $angular-material-template-theme: mat.define-light-theme(
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@include button();
-@include input();
-@include table();
+@include button;
+@include input;
+@include table;
 
 // Fix overlapping border on inputs
 .mdc-notched-outline__notch {
