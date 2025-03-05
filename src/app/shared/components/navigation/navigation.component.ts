@@ -3,18 +3,19 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIcon } from '@angular/material/icon';
 
 import { IconsModule } from '../../../core/icons/icons.module';
-import { NavigationItemsComponent } from './navigation-items/navigation-items.component';
+import { navItems } from '../../utils/navigation-items';
 
 @Component({
   selector: 'app-navigation',
   standalone: true,
-  imports: [NavigationItemsComponent, MatButtonModule, MatIcon, IconsModule],
+  imports: [MatButtonModule, MatIcon, IconsModule],
   templateUrl: './navigation.component.html',
   styleUrl: './navigation.component.scss',
 })
 export class NavigationComponent {
   isHidden = false;
   lastScrollTop = 0;
+  items = navItems;
 
   @HostListener('window:scroll', [])
   onWindowScroll() {

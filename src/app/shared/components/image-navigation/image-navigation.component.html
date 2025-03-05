@@ -1,0 +1,13 @@
+<div class="px-20 py-6">
+  <div class="grid w-full grid-cols-4 gap-6">
+    @for (item of items(); track $index) {
+      @if (item.image) {
+        <div class="col-span-1">
+          <a [href]="item.url">
+            <img [src]="item.image" alt="" />
+          </a>
+        </div>
+      }
+    }
+  </div>
+</div>

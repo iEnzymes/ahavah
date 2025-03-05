@@ -6,6 +6,8 @@ import { MatIconModule } from '@angular/material/icon';
 import { IconsModule } from '../../../core/icons/icons.module';
 import { CarouselComponent } from '../../../shared/components/carousel/carousel.component';
 import { IImageSlides } from '../../../shared/components/carousel/carousel.inferface';
+import { ImageNavigationComponent } from '../../../shared/components/image-navigation/image-navigation.component';
+import { navItems } from '../../../shared/utils/navigation-items';
 
 @Component({
   selector: 'app-home-landing',
@@ -17,11 +19,14 @@ import { IImageSlides } from '../../../shared/components/carousel/carousel.infer
     IconsModule,
     CarouselComponent,
     CarouselComponent,
+    ImageNavigationComponent,
   ],
   templateUrl: './home-landing.component.html',
   styleUrl: './home-landing.component.scss',
 })
 export class HomeLandingComponent {
+  items = navItems;
+
   slides: IImageSlides[] = [
     {
       image: '../../../../../../assets/images/img2.jpg',
