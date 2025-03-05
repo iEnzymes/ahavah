@@ -1,0 +1,8 @@
+@mixin button {
+  button {
+    --mdc-text-button-container-shape: 50px;
+    --mdc-filled-button-container-shape: 50px;
+    --mdc-protected-button-container-shape: 50px;
+    --mdc-outlined-button-container-shape: 50px;
+  }
+}

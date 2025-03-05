@@ -27,8 +27,8 @@
             "prefix": "app",
             "style": "kebab-case"
           }
-        ], "no-var": "error",
-        "camelcase": "error",
+        ],
+        "no-var": "error",
         "eqeqeq": "error",
         "no-console": "error",
         "no-unused-vars": "error",
@@ -62,6 +62,10 @@
           }
         ]
       }
+    },
+    {
+      "files": ["*.ts"],
+      "extends": ["plugin:@ngrx/recommended"]
     }
   ]
 }

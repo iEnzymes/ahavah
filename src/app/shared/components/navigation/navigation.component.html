@@ -1,0 +1,60 @@
+<div>
+  <div
+    [class.-translate-y-full]="isHidden"
+    class="flex h-12 w-full items-center justify-center bg-black text-primary-50 transition-all duration-300"
+  >
+    <span class="text-sm">promo here 777</span>
+  </div>
+  <div
+    [class.-translate-y-12]="isHidden"
+    class="grid h-20 grid-cols-4 bg-black px-8 transition-all duration-300"
+  >
+    <div class="col-span-1 flex items-center">
+      <a href="/home">
+        <img
+          class="h-16 w-auto"
+          src="../../../../../../assets/images/ahavah-logo.png"
+          alt=""
+        />
+      </a>
+    </div>
+
+    <div class="col-span-2">
+      <div
+        class="flex h-full w-full items-center justify-around gap-4 text-white"
+      >
+        @for (item of items; track $index) {
+          <div
+            class="px-1 py-3 transition delay-500 duration-300 ease-in-out hover:border-b-2 focus:border-b-2"
+          >
+            <a href="item.url">{{ item.label }}</a>
+          </div>
+        }
+      </div>
+    </div>
+
+    <div class="col-span-1 flex items-center justify-end gap-4">
+      <button class="transform text-accent-50 duration-200 hover:scale-150">
+        <mat-icon
+          class="cursor-pointer"
+          matTooltip="Edit filter name."
+          svgIcon="heroicon_outline:user"
+        />
+      </button>
+      <button class="transform text-accent-50 duration-200 hover:scale-150">
+        <mat-icon
+          class="cursor-pointer"
+          matTooltip="Edit filter name."
+          svgIcon="heroicon_outline:shopping-cart"
+        />
+      </button>
+      <button class="transform text-accent-50 duration-200 hover:scale-150">
+        <mat-icon
+          class="cursor-pointer"
+          matTooltip="Edit filter name."
+          svgIcon="heroicon_outline:magnifying-glass"
+        />
+      </button>
+    </div>
+  </div>
+</div>

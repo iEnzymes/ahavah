@@ -60,3 +60,23 @@
 | `lint:fix`      | Runs the linter and fixes any linting errors             | `npm run lint:fix`      |
 | `stylelint`     | Runs the style linter                                    | `npm run stylelint`     |
 | `stylelint:fix` | Runs the style linter and fixes any style linting errors | `npm run stylelint:fix` |
+
+## Debug Tailwind not working
+
+<!-- To check if tailwind is existing -->
+
+npm list tailwindcss
+
+<!-- Install and initialize -->
+
+npm install -D tailwindcss
+npx tailwindcss init
+
+## Generate icons
+
+1. Run '. ./scripts/generate-icons.sh ${svg_folder_path} ${generated_filename}'
+2. Rename generated ${generated_filename} to ${generated_filename}.svg
+3. Open and register it to src/app/core/icons.module
+
+- Reference
+  Documentation: https://material.angular.io/components/icon/overview#registering-icons

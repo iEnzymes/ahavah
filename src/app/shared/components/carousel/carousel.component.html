@@ -1,0 +1,31 @@
+<div class="relative w-full bg-gray-700">
+  <div class="overflow-hidden">
+    <div
+      class="flex transition-transform duration-500 ease-in-out"
+      [style.transform]="'translateX(-' + currentIndex * 100 + '%)'"
+    >
+      @for (item of slides(); track $index) {
+        <div class="min-w-full bg-black">
+          <mat-card class="shadow-lg">
+            <img [src]="item.image" alt="" />
+          </mat-card>
+        </div>
+      }
+    </div>
+  </div>
+
+  <button
+    mat-icon-button
+    (click)="prevSlide()"
+    class="absolute left-2 top-1/2 -translate-y-1/2 scale-150 transform"
+  >
+    <mat-icon class="text-white" svgIcon="heroicon_outline:chevron-left" />
+  </button>
+  <button
+    mat-icon-button
+    (click)="nextSlide()"
+    class="absolute right-2 top-1/2 -translate-y-1/2 scale-150 transform"
+  >
+    <mat-icon class="text-white" svgIcon="heroicon_outline:chevron-right" />
+  </button>
+</div>
