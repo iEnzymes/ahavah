@@ -7,6 +7,8 @@ import { IconsModule } from '../../../core/icons/icons.module';
 import { CarouselComponent } from '../../../shared/components/carousel/carousel.component';
 import { IImageSlides } from '../../../shared/components/carousel/carousel.inferface';
 import { ImageNavigationComponent } from '../../../shared/components/image-navigation/image-navigation.component';
+import { ProductCatalogComponent } from '../../../shared/components/product-catalog/product-catalog.component';
+import { IProductCatalog } from '../../../shared/interface/product-catalog.interface';
 import { navItems } from '../../../shared/utils/navigation-items';
 
 @Component({
@@ -20,6 +22,7 @@ import { navItems } from '../../../shared/utils/navigation-items';
     CarouselComponent,
     CarouselComponent,
     ImageNavigationComponent,
+    ProductCatalogComponent,
   ],
   templateUrl: './home-landing.component.html',
   styleUrl: './home-landing.component.scss',
@@ -29,25 +32,77 @@ export class HomeLandingComponent {
 
   slides: IImageSlides[] = [
     {
-      image: '../../../../../../assets/images/img2.jpg',
+      image: '../../../../../../assets/images/carousel/img2.jpg',
       title: 'Nature',
     },
-    { image: '../../../../../../assets/images/img3.jpg', title: 'City' },
     {
-      image: '../../../../../../assets/images/img4.jpg',
+      image: '../../../../../../assets/images/carousel/img3.jpg',
+      title: 'City',
+    },
+    {
+      image: '../../../../../../assets/images/carousel/img4.jpg',
       title: 'Technology',
     },
     {
-      image: '../../../../../../assets/images/img5.png',
+      image: '../../../../../../assets/images/carousel/img5.png',
       title: 'Technology',
     },
     {
-      image: '../../../../../../assets/images/img6.png',
+      image: '../../../../../../assets/images/carousel/img6.png',
       title: 'Technology',
     },
     {
-      image: '../../../../../../assets/images/img7.png',
+      image: '../../../../../../assets/images/carousel/img7.png',
       title: 'Technology',
+    },
+  ];
+
+  //TODO: API integration for product
+  products: IProductCatalog[] = [
+    {
+      image: '../../../../../../assets/images/product-catalog/product-1-1.jpg',
+      imageHover:
+        '../../../../../../assets/images/product-catalog/product-1-2.jpg',
+      price: '2000',
+      currency: 'PHP',
+      name: 'Cold Brew',
+      description: 'Scented candle',
+    },
+    {
+      image: '../../../../../../assets/images/product-catalog/product-4-1.jpg',
+      imageHover:
+        '../../../../../../assets/images/product-catalog/product-4-2.jpg',
+      price: '2000',
+      currency: 'PHP',
+      name: 'Iced Espresso',
+      description: 'Scented candle',
+    },
+    {
+      image: '../../../../../../assets/images/product-catalog/product-3-1.jpg',
+      imageHover:
+        '../../../../../../assets/images/product-catalog/product-3-2.jpg',
+      price: '2500',
+      currency: 'PHP',
+      name: 'Iced Ube Latte',
+      description: 'Scented candle',
+    },
+    {
+      image: '../../../../../../assets/images/product-catalog/product-2-1.jpg',
+      imageHover:
+        '../../../../../../assets/images/product-catalog/product-2-2.jpg',
+      price: '2500',
+      currency: 'PHP',
+      name: 'Berry Licious',
+      description: 'Scented candle',
+    },
+    {
+      image: '../../../../../../assets/images/product-catalog/product-5-1.jpg',
+      imageHover:
+        '../../../../../../assets/images/product-catalog/product-5-2.jpg',
+      price: '2000',
+      currency: 'PHP',
+      name: 'Violet Velvet Drip',
+      description: 'Scented candle',
     },
   ];
 }
