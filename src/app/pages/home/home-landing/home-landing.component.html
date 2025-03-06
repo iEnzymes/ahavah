@@ -1,14 +1,14 @@
-<div>
+<div class="bg-primary-100">
   <app-carousel [slides]="slides"></app-carousel>
 
-  <div class="bg-primary-100">
+  <div>
     <div class="pb-6 pt-10 text-center">
       <span class="text-xl">LOREM IPSUM SOMETHING OF THEN THIS IS.</span>
     </div>
     <app-image-navigation [items]="items"></app-image-navigation>
   </div>
 
-  <div class="bg-primary-100 pb-10">
+  <div class="pb-10">
     <div class="pb-4 pt-14 text-center">
       <span class="text-xl">LOREM IPSUM SOMETHING OF THEN THIS IS.</span>
     </div>
@@ -19,4 +19,34 @@
       >
     </div>
   </div>
+
+  <app-card>
+    <div class="text-left lg:w-1/2">
+      <h2 class="mb-12 text-3xl font-semibold">The Happy Space.</h2>
+      <p class="mb-4 text-gray-700">
+        Misa was born from a singular passion to make extraordinary candles -
+        that not only look gorgeous and smell ethereal but are a gentle call to
+        slow down, escape the humdrum and discover the everyday magic in and
+        around us.
+      </p>
+      <p class="mb-6 text-gray-700">
+        As Robert Brault wrote, "Enjoy the little things, for one day you may
+        look back and realise they were the big things".
+      </p>
+      <a
+        href="#"
+        class="border-b-2 border-black font-medium text-black transition-all hover:border-transparent"
+      >
+        Read Our Story
+      </a>
+    </div>
+
+    <div class="flex items-center justify-center pl-24 lg:w-1/2">
+      <img
+        src="../../../../assets/images/card/card1.jpg"
+        alt="Ahavah Candles"
+        class="w-full"
+      />
+    </div>
+  </app-card>
 </div>

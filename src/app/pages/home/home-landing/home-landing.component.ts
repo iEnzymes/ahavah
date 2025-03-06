@@ -3,7 +3,9 @@ import { Component } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 
+import { MatCardModule } from '@angular/material/card';
 import { IconsModule } from '../../../core/icons/icons.module';
+import { CardComponent } from '../../../shared/components/card/card.component';
 import { CarouselComponent } from '../../../shared/components/carousel/carousel.component';
 import { IImageSlides } from '../../../shared/components/carousel/carousel.inferface';
 import { ImageNavigationComponent } from '../../../shared/components/image-navigation/image-navigation.component';
@@ -23,6 +25,8 @@ import { navItems } from '../../../shared/utils/navigation-items';
     CarouselComponent,
     ImageNavigationComponent,
     ProductCatalogComponent,
+    MatCardModule,
+    CardComponent,
   ],
   templateUrl: './home-landing.component.html',
   styleUrl: './home-landing.component.scss',
