@@ -13,6 +13,7 @@ export class IconsModule {
   constructor() {
     this.registry('heroicon_outline', 'assets/heroicons/heroicons-outline.svg');
     this.registry('heroicon_solid', 'assets/heroicons/heroicons-solid.svg');
+    this.registry('social_icons', 'assets/socialicons/social-icons.svg');
   }
 
   private registry(namespace: string, url: string) {
