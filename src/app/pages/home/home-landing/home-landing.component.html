@@ -1,22 +1,26 @@
 <div class="bg-primary-100">
   <app-carousel [slides]="slides"></app-carousel>
 
-  <div>
+  <div class="pb-10">
     <div class="pb-6 pt-10 text-center">
       <span class="text-xl">LOREM IPSUM SOMETHING OF THEN THIS IS.</span>
     </div>
-    <app-image-navigation [items]="items"></app-image-navigation>
+    <div class="px-20 py-6">
+      <app-image-navigation [items]="items" />
+    </div>
   </div>
 
   <div class="pb-10">
-    <div class="pb-4 pt-14 text-center">
+    <div class="pb-6 pt-10 text-center">
       <span class="text-xl">LOREM IPSUM SOMETHING OF THEN THIS IS.</span>
     </div>
-    <app-product-catalog [items]="products"></app-product-catalog>
-    <div class="flex items-center justify-center">
-      <a href="/collection" class="bg-black px-28 py-4 text-primary-50"
-        >VIEW ALL</a
-      >
+    <div class="px-20 py-6">
+      <app-product-catalog [items]="products" />
+      <div class="flex items-center justify-center">
+        <a href="/collection" class="bg-black px-28 py-4 text-primary-50"
+          >VIEW ALL</a
+        >
+      </div>
     </div>
   </div>
 
@@ -49,4 +53,13 @@
       />
     </div>
   </app-card>
+
+  <div class="pb-10">
+    <div class="pb-6 pt-10 text-center">
+      <span class="text-xl">Shop by Fragrance</span>
+    </div>
+    <div class="py-6">
+      <app-carousel [slides]="categorySlides" [fullWidth]="false" />
+    </div>
+  </div>
 </div>

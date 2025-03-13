@@ -1,39 +1,37 @@
-<div class="px-20 py-6">
-  <div class="grid w-full grid-cols-3 gap-4">
-    @if (product) {
-      @for (item of product; track $index) {
-        <div>
-          <div
-            class="relative mx-auto h-[720px] w-[90%] transition-all duration-700 hover:scale-x-105"
-            (mouseover)="item.isHovered = true"
-            (mouseout)="item.isHovered = false"
-            (focus)="item.isHovered = true"
-            (blur)="item.isHovered = false"
-            tabindex="0"
-          >
-            <img
-              [src]="item.image"
-              alt=""
-              class="absolute inset-0 h-full w-full object-cover transition-opacity duration-500"
-              [ngClass]="{ 'opacity-0': item.isHovered }"
-            />
-            <img
-              [src]="item.imageHover"
-              alt=""
-              class="absolute inset-0 h-full w-full object-cover transition-opacity duration-500"
-              [ngClass]="{
-                'opacity-100': item.isHovered,
-                'opacity-0': !item.isHovered
-              }"
-            />
-          </div>
-          <div class="flex flex-col gap-y-2 py-2 text-center text-sm">
-            <span>{{ item.name }}</span>
-            <span class="text-primary-500">{{ item.description }}</span>
-            <span>{{ item.currency }}: {{ item.price }}</span>
-          </div>
+<div class="grid w-full grid-cols-3 gap-4">
+  @if (product) {
+    @for (item of product; track $index) {
+      <div>
+        <div
+          class="relative mx-auto h-[720px] w-[90%] transition-all duration-700 hover:scale-x-105"
+          (mouseover)="item.isHovered = true"
+          (mouseout)="item.isHovered = false"
+          (focus)="item.isHovered = true"
+          (blur)="item.isHovered = false"
+          tabindex="0"
+        >
+          <img
+            [src]="item.image"
+            alt=""
+            class="absolute inset-0 h-full w-full object-cover transition-opacity duration-500"
+            [ngClass]="{ 'opacity-0': item.isHovered }"
+          />
+          <img
+            [src]="item.imageHover"
+            alt=""
+            class="absolute inset-0 h-full w-full object-cover transition-opacity duration-500"
+            [ngClass]="{
+              'opacity-100': item.isHovered,
+              'opacity-0': !item.isHovered
+            }"
+          />
         </div>
-      }
+        <div class="flex flex-col gap-y-2 py-2 text-center text-sm">
+          <span>{{ item.name }}</span>
+          <span class="text-primary-500">{{ item.description }}</span>
+          <span>{{ item.currency }}: {{ item.price }}</span>
+        </div>
+      </div>
     }
-  </div>
+  }
 </div>

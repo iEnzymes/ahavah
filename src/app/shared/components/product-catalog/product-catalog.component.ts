@@ -1,6 +1,6 @@
+import { CommonModule } from '@angular/common';
 import { Component, effect, input } from '@angular/core';
 
-import { CommonModule } from '@angular/common';
 import { IProductCatalog } from '../../interface/product-catalog.interface';
 
 @Component({
