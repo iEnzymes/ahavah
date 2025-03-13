@@ -1,18 +1,22 @@
+import { NgClass } from '@angular/common';
 import { Component, input } from '@angular/core';
 import { MatCardModule } from '@angular/material/card';
 import { MatIcon } from '@angular/material/icon';
-import { IImageSlides } from './carousel.inferface';
+
+import { IImageList } from './carousel.inferface';
 
 @Component({
   selector: 'app-carousel',
   standalone: true,
-  imports: [MatCardModule, MatIcon],
+  imports: [MatCardModule, MatIcon, NgClass],
   templateUrl: './carousel.component.html',
   styleUrl: './carousel.component.scss',
 })
 export class CarouselComponent {
+  fullWidth = input<boolean>(true);
+
   currentIndex = 0;
-  slides = input.required<IImageSlides[]>();
+  slides = input.required<IImageList[]>();
 
   prevSlide() {
     this.currentIndex =

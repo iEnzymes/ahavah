@@ -1,13 +1,13 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
 
-import { MatCardModule } from '@angular/material/card';
 import { IconsModule } from '../../../core/icons/icons.module';
 import { CardComponent } from '../../../shared/components/card/card.component';
 import { CarouselComponent } from '../../../shared/components/carousel/carousel.component';
-import { IImageSlides } from '../../../shared/components/carousel/carousel.inferface';
+import { IImageList } from '../../../shared/components/carousel/carousel.inferface';
 import { ImageNavigationComponent } from '../../../shared/components/image-navigation/image-navigation.component';
 import { ProductCatalogComponent } from '../../../shared/components/product-catalog/product-catalog.component';
 import { IProductCatalog } from '../../../shared/interface/product-catalog.interface';
@@ -34,30 +34,30 @@ import { navItems } from '../../../shared/utils/navigation-items';
 export class HomeLandingComponent {
   items = navItems;
 
-  slides: IImageSlides[] = [
+  slides: IImageList[] = [
     {
       image: '../../../../../../assets/images/carousel/img2.jpg',
       title: 'Nature',
     },
     {
       image: '../../../../../../assets/images/carousel/img3.jpg',
-      title: 'City',
+      title: 'Nature',
     },
     {
       image: '../../../../../../assets/images/carousel/img4.jpg',
-      title: 'Technology',
+      title: 'Nature',
     },
     {
       image: '../../../../../../assets/images/carousel/img5.png',
-      title: 'Technology',
+      title: 'Nature',
     },
     {
       image: '../../../../../../assets/images/carousel/img6.png',
-      title: 'Technology',
+      title: 'Nature',
     },
     {
       image: '../../../../../../assets/images/carousel/img7.png',
-      title: 'Technology',
+      title: 'Nature',
     },
   ];
 
@@ -107,6 +107,41 @@ export class HomeLandingComponent {
       currency: 'PHP',
       name: 'Violet Velvet Drip',
       description: 'Scented candle',
+    },
+  ];
+
+  // carousel 2
+
+  categorySlides: IImageList[] = [
+    {
+      image: '../../../../../../assets/images/category/category2.jpg',
+      title: 'Nature',
+      url: '/test',
+    },
+    {
+      image: '../../../../../../assets/images/category/category1.jpg',
+      title: 'Nature',
+      url: '/test',
+    },
+    {
+      image: '../../../../../../assets/images/category/category3.jpg',
+      title: 'Nature',
+      url: '/test',
+    },
+    {
+      image: '../../../../../../assets/images/category/category4.jpg',
+      title: 'Nature',
+      url: '/test',
+    },
+    {
+      image: '../../../../../../assets/images/category/category4.jpg',
+      title: 'Nature',
+      url: '/test',
+    },
+    {
+      image: '../../../../../../assets/images/category/category4.jpg',
+      title: 'Nature',
+      url: '/test',
     },
   ];
 }

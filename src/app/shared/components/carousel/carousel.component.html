@@ -1,31 +1,80 @@
-<div class="relative w-full bg-gray-700">
+<div class="relative">
   <div class="overflow-hidden">
-    <div
-      class="flex transition-transform duration-500 ease-in-out"
-      [style.transform]="'translateX(-' + currentIndex * 100 + '%)'"
-    >
-      @for (item of slides(); track $index) {
-        <div class="min-w-full bg-black">
-          <mat-card class="shadow-lg">
-            <img [src]="item.image" alt="" />
-          </mat-card>
-        </div>
-      }
-    </div>
+    @if (fullWidth()) {
+      <div
+        class="flex transition-transform duration-500 ease-in-out"
+        [style.transform]="'translateX(-' + currentIndex * 100 + '%)'"
+      >
+        @for (item of slides(); track $index) {
+          <div class="min-w-full bg-black">
+            <mat-card class="shadow-lg">
+              <img [src]="item.image" alt="" />
+            </mat-card>
+          </div>
+        }
+      </div>
+    } @else {
+      <div
+        class="mx-20 flex gap-5 transition-transform duration-500 ease-in-out"
+        [style.transform]="'translateX(-' + currentIndex * 34.2 + '%)'"
+      >
+        @for (item of slides(); track $index) {
+          <div class="max-h-screen min-w-[33%]">
+            <mat-card class="shadow-lg">
+              @if (item.url) {
+                <a [attr.href]="item.url" class="">
+                  <div class="relative overflow-hidden">
+                    <img
+                      class="h-auto w-full transition-all duration-700 hover:scale-125"
+                      [src]="item.image"
+                      alt=""
+                    />
+                    <span
+                      class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transform text-4xl text-white/70"
+                      >{{ item.title }}</span
+                    >
+                  </div>
+                </a>
+              } @else {
+                <div class="relative overflow-hidden">
+                  <img class="h-auto w-full" [src]="item.image" alt="" />
+                  <span
+                    class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transform text-4xl text-white/70"
+                    >{{ item.title }}</span
+                  >
+                </div>
+              }
+            </mat-card>
+          </div>
+        }
+      </div>
+    }
   </div>
-
   <button
     mat-icon-button
     (click)="prevSlide()"
-    class="absolute left-2 top-1/2 -translate-y-1/2 scale-150 transform"
+    class="absolute left-2 top-1/2 -translate-y-1/2 scale-150 transform text-white"
+    [ngClass]="{
+      'left-28 flex scale-75 transform items-center justify-center rounded-full bg-white p-3 text-slate-900 opacity-30 duration-200 enabled:opacity-100 enabled:hover:scale-100 ':
+        !fullWidth()
+    }"
+    [disabled]="!fullWidth() && currentIndex <= 0"
   >
-    <mat-icon class="text-white" svgIcon="heroicon_outline:chevron-left" />
+    <mat-icon svgIcon="heroicon_outline:chevron-left" />
   </button>
   <button
     mat-icon-button
     (click)="nextSlide()"
-    class="absolute right-2 top-1/2 -translate-y-1/2 scale-150 transform"
+    class="absolute right-2 top-1/2 -translate-y-1/2 scale-150 transform text-white"
+    [ngClass]="{
+      'right-28 flex scale-75 transform items-center justify-center rounded-full bg-white p-3 text-slate-900 opacity-30 duration-200 enabled:opacity-100 enabled:hover:scale-100  ':
+        !fullWidth()
+    }"
+    [disabled]="
+      (!fullWidth() && currentIndex === slides().length - 3) ||
+      slides().length <= 3
+    "
   >
-    <mat-icon class="text-white" svgIcon="heroicon_outline:chevron-right" />
+    <mat-icon svgIcon="heroicon_outline:chevron-right" />
   </button>
 </div>
