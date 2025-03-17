@@ -1,19 +1,19 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { HomeComponent } from './home.component';
+import { CandlesComponent } from './candles.component';
 
 const routes: Routes = [
   {
     path: '',
-    component: HomeComponent,
+    component: CandlesComponent,
     children: [
       {
         path: '',
         pathMatch: 'full',
         loadComponent: () =>
-          import('./home-landing/home-landing.component').then(
-            (c) => c.HomeLandingComponent,
+          import('./candles-landing/candles-landing.component').then(
+            (c) => c.CandlesLandingComponent,
           ),
       },
     ],
@@ -24,4 +24,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
-export class HomeRoutes {}
+export class CandlesRoutes {}

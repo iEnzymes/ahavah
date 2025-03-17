@@ -46,8 +46,9 @@
         @for (item of items; track $index) {
           <div
             class="px-1 py-3 transition delay-500 duration-300 ease-in-out hover:border-b-2 focus:border-b-2"
+            routerLinkActive="border-b-2 "
           >
-            <a href="item.url">{{ item.label }}</a>
+            <a [routerLink]="item.url">{{ item.label }}</a>
           </div>
         }
       </div>
