@@ -61,6 +61,33 @@ export class HomeLandingComponent {
     },
   ];
 
+  mobileSlides: IImageList[] = [
+    {
+      image: '../../../../../../assets/images/carousel/mobile/m-banner1.jpg',
+      title: 'Nature',
+    },
+    {
+      image: '../../../../../../assets/images/carousel/mobile/m-banner2.jpg',
+      title: 'Nature',
+    },
+    {
+      image: '../../../../../../assets/images/carousel/mobile/m-banner3.jpg',
+      title: 'Nature',
+    },
+    {
+      image: '../../../../../../assets/images/carousel/mobile/m-banner4.png',
+      title: 'Nature',
+    },
+    {
+      image: '../../../../../../assets/images/carousel/mobile/m-banner5.png',
+      title: 'Nature',
+    },
+    {
+      image: '../../../../../../assets/images/carousel/mobile/m-banner1.jpg',
+      title: 'Nature',
+    },
+  ];
+
   //TODO: API integration for product
   products: IProductCatalog[] = [
     {

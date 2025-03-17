@@ -5,7 +5,7 @@
         class="flex transition-transform duration-500 ease-in-out"
         [style.transform]="'translateX(-' + currentIndex * 100 + '%)'"
       >
-        @for (item of slides(); track $index) {
+        @for (item of imageList; track $index) {
           <div class="min-w-full bg-black">
             <mat-card class="shadow-lg">
               <img [src]="item.image" alt="" />
@@ -15,11 +15,11 @@
       </div>
     } @else {
       <div
-        class="mx-20 flex gap-5 transition-transform duration-500 ease-in-out"
-        [style.transform]="'translateX(-' + currentIndex * 34.2 + '%)'"
+        class="mx-5 flex gap-5 transition-transform duration-500 ease-in-out md:mx-20"
+        [style.transform]="getTransformStyle()"
       >
         @for (item of slides(); track $index) {
-          <div class="max-h-screen min-w-[33%]">
+          <div class="max-h-screen min-w-[85%] md:min-w-[50%] lg:min-w-[33%]">
             <mat-card class="shadow-lg">
               @if (item.url) {
                 <a [attr.href]="item.url" class="">
@@ -55,7 +55,7 @@
     (click)="prevSlide()"
     class="absolute left-2 top-1/2 -translate-y-1/2 scale-150 transform text-white"
     [ngClass]="{
-      'left-28 flex scale-75 transform items-center justify-center rounded-full bg-white p-3 text-slate-900 opacity-30 duration-200 enabled:opacity-100 enabled:hover:scale-100 ':
+      'flex scale-75 transform items-center justify-center rounded-full bg-white p-3 text-primary-900 opacity-30 duration-200 enabled:opacity-100 enabled:hover:scale-100 md:left-16 lg:left-28':
         !fullWidth()
     }"
     [disabled]="!fullWidth() && currentIndex <= 0"
@@ -67,11 +67,11 @@
     (click)="nextSlide()"
     class="absolute right-2 top-1/2 -translate-y-1/2 scale-150 transform text-white"
     [ngClass]="{
-      'right-28 flex scale-75 transform items-center justify-center rounded-full bg-white p-3 text-slate-900 opacity-30 duration-200 enabled:opacity-100 enabled:hover:scale-100  ':
+      'flex scale-75 transform items-center justify-center rounded-full bg-white p-3 text-primary-900 opacity-30 duration-200 enabled:opacity-100 enabled:hover:scale-100 md:right-16 lg:right-28':
         !fullWidth()
     }"
     [disabled]="
-      (!fullWidth() && currentIndex === slides().length - 3) ||
+      (!fullWidth() && currentIndex === slides().length - getIndexLimiter()) ||
       slides().length <= 3
     "
   >

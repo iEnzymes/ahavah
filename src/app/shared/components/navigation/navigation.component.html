@@ -5,11 +5,31 @@
   >
     <span class="text-sm">promo here 777</span>
   </div>
+
   <div
     [class.-translate-y-12]="isHidden"
     class="grid h-20 grid-cols-4 bg-black px-8 transition-all duration-300"
   >
-    <div class="col-span-1 flex items-center">
+    <div
+      class="col-span-1 flex items-center justify-start text-white xl:hidden"
+    >
+      <button
+        class="transform text-accent-50 duration-200 hover:scale-150"
+        (click)="toggleMenu()"
+      >
+        <mat-icon
+          class="cursor-pointer"
+          matTooltip="Edit filter name."
+          [svgIcon]="
+            isMenuOpen ? 'heroicon_outline:x-mark' : 'heroicon_outline:bars-4'
+          "
+        />
+      </button>
+    </div>
+
+    <div
+      class="col-span-2 flex items-center justify-center xl:col-span-1 xl:justify-start"
+    >
       <a href="/home">
         <img
           class="h-16 w-auto"
@@ -19,7 +39,7 @@
       </a>
     </div>
 
-    <div class="col-span-2">
+    <div class="col-span-2 hidden xl:block">
       <div
         class="flex h-full w-full items-center justify-around gap-4 text-white"
       >
@@ -34,7 +54,9 @@
     </div>
 
     <div class="col-span-1 flex items-center justify-end gap-4">
-      <button class="transform text-accent-50 duration-200 hover:scale-150">
+      <button
+        class="hidden transform text-accent-50 duration-200 hover:scale-150 md:block"
+      >
         <mat-icon
           class="cursor-pointer"
           matTooltip="Edit filter name."
@@ -48,13 +70,35 @@
           svgIcon="heroicon_outline:shopping-cart"
         />
       </button>
-      <button class="transform text-accent-50 duration-200 hover:scale-150">
+      <button
+        class="hidden transform text-accent-50 duration-200 hover:scale-150 md:block"
+      >
         <mat-icon
           class="cursor-pointer"
           matTooltip="Edit filter name."
           svgIcon="heroicon_outline:magnifying-glass"
         />
       </button>
+    </div>
+  </div>
+  <div
+    class="absolute min-h-screen w-full scale-100 transform bg-white opacity-0 transition-all duration-300 ease-out"
+    [class.opacity-100]="isMenuOpen"
+    [class.scale-100]="isMenuOpen"
+    [class.visible]="isMenuOpen"
+    [class.invisible]="!isMenuOpen"
+    [class.top-20]="isHidden"
+  >
+    <div>
+      <div class="h-full w-full items-center px-12 py-10 text-primary-900">
+        @for (item of items; track $index) {
+          <div
+            class="py-4 text-xl transition delay-500 duration-300 ease-in-out"
+          >
+            <a href="item.url">{{ item.label }}</a>
+          </div>
+        }
+      </div>
     </div>
   </div>
 </div>
