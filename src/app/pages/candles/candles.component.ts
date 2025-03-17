@@ -4,10 +4,10 @@ import { RouterOutlet } from '@angular/router';
 import { LayoutComponent } from '../../shared/components/layout/layout.component';
 
 @Component({
-  selector: 'app-home',
+  selector: 'app-candles',
   standalone: true,
   imports: [RouterOutlet, LayoutComponent],
-  templateUrl: './home.component.html',
-  styleUrl: './home.component.scss',
+  templateUrl: './candles.component.html',
+  styleUrl: './candles.component.scss',
 })
-export class HomeComponent {}
+export class CandlesComponent {}
