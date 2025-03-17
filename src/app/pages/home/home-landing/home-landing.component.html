@@ -1,23 +1,25 @@
 <div class="bg-primary-100">
-  <app-carousel [slides]="slides"></app-carousel>
+  <app-carousel [slides]="slides" [mobileSlides]="mobileSlides" />
 
   <div class="pb-10">
     <div class="pb-6 pt-10 text-center">
       <span class="text-xl">LOREM IPSUM SOMETHING OF THEN THIS IS.</span>
     </div>
-    <div class="px-20 py-6">
+    <div class="px-4 py-6 md:px-20">
       <app-image-navigation [items]="items" />
     </div>
   </div>
 
   <div class="pb-10">
     <div class="pb-6 pt-10 text-center">
-      <span class="text-xl">LOREM IPSUM SOMETHING OF THEN THIS IS.</span>
+      <span class="text-xl">Our Best Seller</span>
     </div>
-    <div class="px-20 py-6">
+    <div class="px-4 py-6 md:px-20">
       <app-product-catalog [items]="products" />
-      <div class="flex items-center justify-center">
-        <a href="/collection" class="bg-black px-28 py-4 text-primary-50"
+      <div class="flex items-center justify-center pt-8">
+        <a
+          href="/collection"
+          class="bg-black px-14 py-4 text-primary-50 lg:px-28"
           >VIEW ALL</a
         >
       </div>
@@ -25,15 +27,15 @@
   </div>
 
   <app-card>
-    <div class="text-left lg:w-1/2">
-      <h2 class="mb-12 text-3xl font-semibold">The Happy Space.</h2>
-      <p class="mb-4 text-gray-700">
+    <div class="px-4 pt-8 text-left md:w-1/2 md:px-0 md:pt-0">
+      <h2 class="mb-12 text-2xl font-thin">The Happy Space.</h2>
+      <p class="mb-4 font-thin text-gray-700">
         Misa was born from a singular passion to make extraordinary candles -
         that not only look gorgeous and smell ethereal but are a gentle call to
         slow down, escape the humdrum and discover the everyday magic in and
         around us.
       </p>
-      <p class="mb-6 text-gray-700">
+      <p class="mb-6 font-thin text-gray-700">
         As Robert Brault wrote, "Enjoy the little things, for one day you may
         look back and realise they were the big things".
       </p>
@@ -45,7 +47,9 @@
       </a>
     </div>
 
-    <div class="flex items-center justify-center pl-24 lg:w-1/2">
+    <div
+      class="flex w-full items-center justify-center md:w-1/2 md:pl-12 lg:pl-24"
+    >
       <img
         src="../../../../assets/images/card/card1.jpg"
         alt="Ahavah Candles"

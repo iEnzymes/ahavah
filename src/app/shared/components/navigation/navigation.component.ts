@@ -1,3 +1,4 @@
+import { CommonModule } from '@angular/common';
 import { Component, HostListener } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIcon } from '@angular/material/icon';
@@ -8,7 +9,7 @@ import { navItems } from '../../utils/navigation-items';
 @Component({
   selector: 'app-navigation',
   standalone: true,
-  imports: [MatButtonModule, MatIcon, IconsModule],
+  imports: [MatButtonModule, MatIcon, IconsModule, CommonModule],
   templateUrl: './navigation.component.html',
   styleUrl: './navigation.component.scss',
 })
@@ -17,10 +18,18 @@ export class NavigationComponent {
   lastScrollTop = 0;
   items = navItems;
 
+  isMenuOpen: boolean = false;
+
   @HostListener('window:scroll', [])
   onWindowScroll() {
-    const currentScroll = document.documentElement.scrollTop;
-    this.isHidden = currentScroll > this.lastScrollTop;
-    this.lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+    if (!this.isMenuOpen) {
+      const currentScroll = document.documentElement.scrollTop;
+      this.isHidden = currentScroll > this.lastScrollTop;
+      this.lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+    }
+  }
+
+  toggleMenu() {
+    this.isMenuOpen = !this.isMenuOpen;
   }
 }
