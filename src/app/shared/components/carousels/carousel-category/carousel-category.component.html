@@ -1,0 +1,35 @@
+<div class="relative">
+  <div class="overflow-hidden">
+    <div
+      class="mx-5 flex gap-5 transition-transform duration-500 ease-in-out md:mx-20"
+      [style.transform]="getTransformStyle()"
+    >
+      @for (item of slides(); track $index) {
+        <div class="max-h-screen min-w-[85%] md:min-w-[50%] lg:min-w-[33%]">
+          <mat-card class="shadow-lg">
+            <app-images-category [item]="item" />
+          </mat-card>
+        </div>
+      }
+    </div>
+    <button
+      mat-icon-button
+      (click)="prevSlide()"
+      class="absolute left-2 top-1/2 flex -translate-y-1/2 scale-75 transform items-center justify-center rounded-full bg-white p-3 text-primary-900 opacity-30 duration-200 enabled:opacity-100 enabled:hover:scale-100 md:left-16 lg:left-28"
+      [disabled]="currentIndex <= 0"
+    >
+      <mat-icon svgIcon="heroicon_outline:chevron-left" />
+    </button>
+    <button
+      mat-icon-button
+      (click)="nextSlide()"
+      class="absolute right-2 top-1/2 flex -translate-y-1/2 scale-75 transform items-center justify-center rounded-full bg-white p-3 text-primary-900 opacity-30 duration-200 enabled:opacity-100 enabled:hover:scale-100 md:right-16 lg:right-28"
+      [disabled]="
+        currentIndex === slides().length - getIndexLimiter() ||
+        slides().length <= 3
+      "
+    >
+      <mat-icon svgIcon="heroicon_outline:chevron-right" />
+    </button>
+  </div>
+</div>

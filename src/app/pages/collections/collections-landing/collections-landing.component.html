@@ -1,0 +1,16 @@
+<div class="bg-primary-100">
+  <div class="pb-10">
+    <div class="pb-6 pt-10 text-center">
+      <span class="text-3xl">Collections</span>
+    </div>
+    <div
+      class="grid grid-cols-1 gap-x-5 gap-y-8 px-8 py-14 md:grid-cols-3 md:px-10 lg:px-20"
+    >
+      @for (item of collectionItems; track $index) {
+        <div class="max-h-screen min-w-[85%]">
+          <app-images-category [item]="item" />
+        </div>
+      }
+    </div>
+  </div>
+</div>

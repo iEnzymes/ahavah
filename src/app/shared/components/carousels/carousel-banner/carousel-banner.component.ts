@@ -1,22 +1,18 @@
-import { NgClass } from '@angular/common';
 import { Component, HostListener, input } from '@angular/core';
 import { MatCardModule } from '@angular/material/card';
 import { MatIcon } from '@angular/material/icon';
 
-import { IImageList } from './carousel.inferface';
-
+import { IImageList } from '../../../interfaces/carousel.inferface';
 @Component({
-  selector: 'app-carousel',
+  selector: 'app-carousel-banner',
   standalone: true,
-  imports: [MatCardModule, MatIcon, NgClass],
-  templateUrl: './carousel.component.html',
-  styleUrl: './carousel.component.scss',
+  imports: [MatCardModule, MatIcon],
+  templateUrl: './carousel-banner.component.html',
+  styleUrl: './carousel-banner.component.scss',
 })
-export class CarouselComponent {
+export class CarouselBannerComponent {
   slides = input.required<IImageList[]>();
   mobileSlides = input<IImageList[]>();
-
-  fullWidth = input<boolean>(true);
 
   imageList: IImageList[] | undefined = [];
   currentIndex = 0;
@@ -33,30 +29,6 @@ export class CarouselComponent {
   nextSlide() {
     this.currentIndex =
       this.currentIndex < this.slides().length - 1 ? this.currentIndex + 1 : 0;
-  }
-
-  getTransformStyle(): string {
-    const width = window.innerWidth;
-
-    if (width >= 1024) {
-      return `translateX(-${this.currentIndex * 34.2}%)`;
-    } else if (width >= 768) {
-      return `translateX(-${this.currentIndex * 54}%)`;
-    } else {
-      return `translateX(-${this.currentIndex * 90}%)`;
-    }
-  }
-
-  getIndexLimiter(): number {
-    const width = window.innerWidth;
-
-    if (width >= 1024) {
-      return 3;
-    } else if (width >= 768) {
-      return 2;
-    } else {
-      return 1;
-    }
   }
 
   @HostListener('window:resize', ['$event'])

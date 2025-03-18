@@ -3,7 +3,7 @@ import { MatOption } from '@angular/material/core';
 import { MatFormField, MatLabel, MatSelect } from '@angular/material/select';
 
 import { ProductCatalogComponent } from '../../../shared/components/product-catalog/product-catalog.component';
-import { IProductCatalog } from '../../../shared/interface/product-catalog.interface';
+import { IProductCatalog } from '../../../shared/interfaces/product-catalog.interface';
 
 @Component({
   selector: 'app-gifts-landing',

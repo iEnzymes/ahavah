@@ -21,4 +21,11 @@ export const routes: Routes = [
     loadChildren: () =>
       import('./pages/gifts/gifts.routes').then((m) => m.GiftsRoutes),
   },
+  {
+    path: 'collections',
+    loadChildren: () =>
+      import('./pages/collections/collections.routes').then(
+        (m) => m.CollectionsRoutes,
+      ),
+  },
 ];
