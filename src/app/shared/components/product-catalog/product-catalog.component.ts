@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, effect, input } from '@angular/core';
 
-import { IProductCatalog } from '../../interface/product-catalog.interface';
+import { IProductCatalog } from '../../interfaces/product-catalog.interface';
 
 @Component({
   selector: 'app-product-catalog',

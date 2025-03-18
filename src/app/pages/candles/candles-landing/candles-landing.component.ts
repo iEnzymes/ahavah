@@ -7,7 +7,7 @@ import {
 } from '@angular/material/select';
 
 import { ProductCatalogComponent } from '../../../shared/components/product-catalog/product-catalog.component';
-import { IProductCatalog } from '../../../shared/interface/product-catalog.interface';
+import { IProductCatalog } from '../../../shared/interfaces/product-catalog.interface';
 
 @Component({
   selector: 'app-candles-landing',

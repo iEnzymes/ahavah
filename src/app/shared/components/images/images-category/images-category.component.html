@@ -1,0 +1,23 @@
+@if (item().url) {
+  <a [attr.href]="item().url" class="">
+    <div class="group relative overflow-hidden">
+      <img
+        class="h-auto w-full transition-all duration-700 hover:scale-125"
+        [src]="item().image"
+        alt=""
+      />
+      <span
+        class="sibling absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transform text-4xl text-white/70 transition-all duration-700 group-hover:top-[40%] group-hover:text-white"
+        >{{ item().title }}</span
+      >
+    </div>
+  </a>
+} @else {
+  <div class="relative overflow-hidden">
+    <img class="h-auto w-full" [src]="item().image" alt="" />
+    <span
+      class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transform text-4xl text-white/70"
+      >{{ item().title }}</span
+    >
+  </div>
+}

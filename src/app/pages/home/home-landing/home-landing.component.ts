@@ -6,11 +6,12 @@ import { MatIconModule } from '@angular/material/icon';
 
 import { IconsModule } from '../../../core/icons/icons.module';
 import { CardComponent } from '../../../shared/components/card/card.component';
-import { CarouselComponent } from '../../../shared/components/carousel/carousel.component';
-import { IImageList } from '../../../shared/components/carousel/carousel.inferface';
-import { ImageNavigationComponent } from '../../../shared/components/image-navigation/image-navigation.component';
+import { CarouselBannerComponent } from '../../../shared/components/carousels/carousel-banner/carousel-banner.component';
+import { CarouselCategoryComponent } from '../../../shared/components/carousels/carousel-category/carousel-category.component';
+import { ImageNavigationComponent } from '../../../shared/components/images/image-navigation/image-navigation.component';
 import { ProductCatalogComponent } from '../../../shared/components/product-catalog/product-catalog.component';
-import { IProductCatalog } from '../../../shared/interface/product-catalog.interface';
+import { IImageList } from '../../../shared/interfaces/carousel.inferface';
+import { IProductCatalog } from '../../../shared/interfaces/product-catalog.interface';
 import { navItems } from '../../../shared/utils/navigation-items';
 
 @Component({
@@ -21,12 +22,12 @@ import { navItems } from '../../../shared/utils/navigation-items';
     CommonModule,
     MatButtonModule,
     IconsModule,
-    CarouselComponent,
-    CarouselComponent,
     ImageNavigationComponent,
     ProductCatalogComponent,
     MatCardModule,
     CardComponent,
+    CarouselBannerComponent,
+    CarouselCategoryComponent,
   ],
   templateUrl: './home-landing.component.html',
   styleUrl: './home-landing.component.scss',

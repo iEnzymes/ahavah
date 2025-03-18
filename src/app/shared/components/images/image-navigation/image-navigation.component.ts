@@ -1,6 +1,6 @@
 import { Component, input } from '@angular/core';
 
-import { INavigationItems } from '../../interface/navigation.interface';
+import { INavigationItems } from '../../../interfaces/navigation.interface';
 
 @Component({
   selector: 'app-image-navigation',

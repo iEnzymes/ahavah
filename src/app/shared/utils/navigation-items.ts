@@ -1,4 +1,4 @@
-import { INavigationItems } from '../interface/navigation.interface';
+import { INavigationItems } from '../interfaces/navigation.interface';
 
 export const navItems: INavigationItems[] = [
   {
