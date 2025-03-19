@@ -16,6 +16,14 @@ const routes: Routes = [
             (c) => c.CollectionsLandingComponent,
           ),
       },
+      {
+        path: 'view/:collections',
+        pathMatch: 'full',
+        loadComponent: () =>
+          import('./collections-view/collections-view.component').then(
+            (c) => c.CollectionsViewComponent,
+          ),
+      },
     ],
   },
 ];
