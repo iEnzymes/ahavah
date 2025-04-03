@@ -17,6 +17,22 @@ const routes: Routes = [
           ),
       },
       {
+        path: 'candles',
+        pathMatch: 'full',
+        loadComponent: () =>
+          import('./collections-candle/collections-candle.component').then(
+            (c) => c.CollectionsCandleComponent,
+          ),
+      },
+      {
+        path: 'gifts',
+        pathMatch: 'full',
+        loadComponent: () =>
+          import('./collections-gifts/collections-gifts.component').then(
+            (c) => c.CollectionsGiftsComponent,
+          ),
+      },
+      {
         path: 'view/:collections',
         pathMatch: 'full',
         loadComponent: () =>

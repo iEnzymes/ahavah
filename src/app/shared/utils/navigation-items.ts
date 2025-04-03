@@ -3,12 +3,12 @@ import { INavigationItems } from '../interfaces/navigation.interface';
 export const navItems: INavigationItems[] = [
   {
     label: 'Candles',
-    url: '/candles',
+    url: '/collections/candles',
     image: '../../../../../../assets/images/image-navigation/candle_lg.jpg',
   },
   {
     label: 'Gifts',
-    url: '/gifts',
+    url: '/collections/gifts',
     image: '../../../../../../assets/images/image-navigation/gift_lg.jpg',
   },
   {
@@ -18,7 +18,7 @@ export const navItems: INavigationItems[] = [
   },
   {
     label: 'Accesories',
-    url: '/Accesories',
+    url: '/accesories',
     image:
       '../../../../../../assets/images/image-navigation/accessories_lg.jpg',
   },
