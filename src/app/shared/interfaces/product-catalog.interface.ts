@@ -4,6 +4,7 @@ export interface IProductCatalog {
   price: string;
   currency: string;
   name: string;
+  label: string;
   description: string;
   isHovered?: boolean;
 }

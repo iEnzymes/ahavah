@@ -10,7 +10,7 @@
           (blur)="item.isHovered = false"
           tabindex="0"
         >
-          <a routerLink="view/details/">
+          <a [routerLink]="['product', item.name]">
             <img
               [src]="item.image"
               alt=""
