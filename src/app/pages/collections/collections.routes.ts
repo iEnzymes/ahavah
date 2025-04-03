@@ -25,6 +25,14 @@ const routes: Routes = [
           ),
       },
       {
+        path: 'candles/product/:fiter',
+        pathMatch: 'full',
+        loadComponent: () =>
+          import('./collections-detail/collections-detail.component').then(
+            (c) => c.CollectionsDetailComponent,
+          ),
+      },
+      {
         path: 'gifts',
         pathMatch: 'full',
         loadComponent: () =>
@@ -33,11 +41,27 @@ const routes: Routes = [
           ),
       },
       {
-        path: 'view/:collections',
+        path: 'gifts/product/:filter',
+        pathMatch: 'full',
+        loadComponent: () =>
+          import('./collections-detail/collections-detail.component').then(
+            (c) => c.CollectionsDetailComponent,
+          ),
+      },
+      {
+        path: ':collections',
         pathMatch: 'full',
         loadComponent: () =>
           import('./collections-view/collections-view.component').then(
             (c) => c.CollectionsViewComponent,
+          ),
+      },
+      {
+        path: ':collections/product/:filter',
+        pathMatch: 'full',
+        loadComponent: () =>
+          import('./collections-detail/collections-detail.component').then(
+            (c) => c.CollectionsDetailComponent,
           ),
       },
     ],

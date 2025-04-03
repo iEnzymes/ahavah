@@ -11,7 +11,7 @@ import { CarouselCategoryComponent } from '../../../shared/components/carousels/
 import { ImageNavigationComponent } from '../../../shared/components/images/image-navigation/image-navigation.component';
 import { ProductCatalogComponent } from '../../../shared/components/product-catalog/product-catalog.component';
 import { IImageList } from '../../../shared/interfaces/carousel.inferface';
-import { IProductCatalog } from '../../../shared/interfaces/product-catalog.interface';
+import { mockProducts } from '../../../shared/mocks/product.mocks';
 import { navItems } from '../../../shared/utils/navigation-items';
 
 @Component({
@@ -90,53 +90,7 @@ export class HomeLandingComponent {
   ];
 
   //TODO: API integration for product
-  products: IProductCatalog[] = [
-    {
-      image: '../../../../../../assets/images/product-catalog/product-1-1.jpg',
-      imageHover:
-        '../../../../../../assets/images/product-catalog/product-1-2.jpg',
-      price: '2000',
-      currency: 'PHP',
-      name: 'Cold Brew',
-      description: 'Scented candle',
-    },
-    {
-      image: '../../../../../../assets/images/product-catalog/product-4-1.jpg',
-      imageHover:
-        '../../../../../../assets/images/product-catalog/product-4-2.jpg',
-      price: '2000',
-      currency: 'PHP',
-      name: 'Iced Espresso',
-      description: 'Scented candle',
-    },
-    {
-      image: '../../../../../../assets/images/product-catalog/product-3-1.jpg',
-      imageHover:
-        '../../../../../../assets/images/product-catalog/product-3-2.jpg',
-      price: '2500',
-      currency: 'PHP',
-      name: 'Iced Ube Latte',
-      description: 'Scented candle',
-    },
-    {
-      image: '../../../../../../assets/images/product-catalog/product-2-1.jpg',
-      imageHover:
-        '../../../../../../assets/images/product-catalog/product-2-2.jpg',
-      price: '2500',
-      currency: 'PHP',
-      name: 'Berry Licious',
-      description: 'Scented candle',
-    },
-    {
-      image: '../../../../../../assets/images/product-catalog/product-5-1.jpg',
-      imageHover:
-        '../../../../../../assets/images/product-catalog/product-5-2.jpg',
-      price: '2000',
-      currency: 'PHP',
-      name: 'Violet Velvet Drip',
-      description: 'Scented candle',
-    },
-  ];
+  products = mockProducts;
 
   // carousel 2
 

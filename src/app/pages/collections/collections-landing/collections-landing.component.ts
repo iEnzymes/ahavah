@@ -15,22 +15,22 @@ export class CollectionsLandingComponent {
     {
       image: '../../../../../../assets/images/collections/collection1.jpg',
       title: 'Natures Venture',
-      url: 'view/natures-venture',
+      url: 'natures-venture',
     },
     {
       image: '../../../../../../assets/images/collections/collection2.jpg',
       title: 'Sweet and Spice',
-      url: 'view/sweet-and-spice',
+      url: 'sweet-and-spice',
     },
     {
       image: '../../../../../../assets/images/collections/collection3.jpg',
       title: 'Fresh and Drip',
-      url: 'view/fresh-and-drip',
+      url: 'fresh-and-drip',
     },
     {
       image: '../../../../../../assets/images/collections/collection4.jpg',
       title: 'Blush Collections',
-      url: 'view/blush-collections',
+      url: 'blush-collections',
     },
     {
       image: '../../../../../../assets/images/collections/collection5.jpg',
