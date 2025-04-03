@@ -16,6 +16,14 @@ const routes: Routes = [
             (c) => c.HomeLandingComponent,
           ),
       },
+      {
+        path: 'view:id',
+        pathMatch: 'full',
+        loadComponent: () =>
+          import('./home-landing/home-landing.component').then(
+            (c) => c.HomeLandingComponent,
+          ),
+      },
     ],
   },
 ];

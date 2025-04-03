@@ -6,7 +6,7 @@ import { ProductCatalogComponent } from '../../../shared/components/product-cata
 import { IProductCatalog } from '../../../shared/interfaces/product-catalog.interface';
 
 @Component({
-  selector: 'app-gifts-landing',
+  selector: 'app-collections-candle',
   standalone: true,
   imports: [
     ProductCatalogComponent,
@@ -15,43 +15,43 @@ import { IProductCatalog } from '../../../shared/interfaces/product-catalog.inte
     MatFormField,
     MatLabel,
   ],
-  templateUrl: './gifts-landing.component.html',
-  styleUrl: './gifts-landing.component.scss',
+  templateUrl: './collections-candle.component.html',
+  styleUrl: './collections-candle.component.scss',
 })
-export class GiftsLandingComponent {
+export class CollectionsCandleComponent {
   //TODO: API integration for product
   products: IProductCatalog[] = [
     {
-      image: '../../../../../../assets/images/product-catalog/product-4-1.jpg',
+      image: '../../../../../../assets/images/product-catalog/product-1-1.jpg',
       imageHover:
-        '../../../../../../assets/images/product-catalog/product-4-2.jpg',
+        '../../../../../../assets/images/product-catalog/product-1-2.jpg',
       price: '2000',
       currency: 'PHP',
       name: 'Cold Brew',
       description: 'Scented candle',
     },
     {
-      image: '../../../../../../assets/images/product-catalog/product-3-1.jpg',
+      image: '../../../../../../assets/images/product-catalog/product-4-1.jpg',
       imageHover:
-        '../../../../../../assets/images/product-catalog/product-3-2.jpg',
+        '../../../../../../assets/images/product-catalog/product-4-2.jpg',
       price: '2000',
       currency: 'PHP',
       name: 'Iced Espresso',
       description: 'Scented candle',
     },
     {
-      image: '../../../../../../assets/images/product-catalog/product-2-1.jpg',
+      image: '../../../../../../assets/images/product-catalog/product-3-1.jpg',
       imageHover:
-        '../../../../../../assets/images/product-catalog/product-2-2.jpg',
+        '../../../../../../assets/images/product-catalog/product-3-2.jpg',
       price: '2500',
       currency: 'PHP',
       name: 'Iced Ube Latte',
       description: 'Scented candle',
     },
     {
-      image: '../../../../../../assets/images/product-catalog/product-1-1.jpg',
+      image: '../../../../../../assets/images/product-catalog/product-2-1.jpg',
       imageHover:
-        '../../../../../../assets/images/product-catalog/product-1-2.jpg',
+        '../../../../../../assets/images/product-catalog/product-2-2.jpg',
       price: '2500',
       currency: 'PHP',
       name: 'Berry Licious',

@@ -1,4 +1,4 @@
-import { Component, HostListener, input } from '@angular/core';
+import { Component, HostListener, input, OnInit } from '@angular/core';
 import { MatCardModule } from '@angular/material/card';
 import { MatIcon } from '@angular/material/icon';
 
@@ -10,7 +10,7 @@ import { IImageList } from '../../../interfaces/carousel.inferface';
   templateUrl: './carousel-banner.component.html',
   styleUrl: './carousel-banner.component.scss',
 })
-export class CarouselBannerComponent {
+export class CarouselBannerComponent implements OnInit {
   slides = input.required<IImageList[]>();
   mobileSlides = input<IImageList[]>();
 

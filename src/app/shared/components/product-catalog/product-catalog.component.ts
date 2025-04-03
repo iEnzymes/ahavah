@@ -1,12 +1,13 @@
 import { CommonModule } from '@angular/common';
 import { Component, effect, input } from '@angular/core';
+import { RouterLink } from '@angular/router';
 
 import { IProductCatalog } from '../../interfaces/product-catalog.interface';
 
 @Component({
   selector: 'app-product-catalog',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterLink],
   templateUrl: './product-catalog.component.html',
   styleUrl: './product-catalog.component.scss',
 })
