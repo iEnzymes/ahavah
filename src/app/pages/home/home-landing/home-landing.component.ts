@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
+import { RouterLink } from '@angular/router';
 
 import { IconsModule } from '../../../core/icons/icons.module';
 import { CardComponent } from '../../../shared/components/card/card.component';
@@ -28,6 +29,7 @@ import { navItems } from '../../../shared/utils/navigation-items';
     CardComponent,
     CarouselBannerComponent,
     CarouselCategoryComponent,
+    RouterLink,
   ],
   templateUrl: './home-landing.component.html',
   styleUrl: './home-landing.component.scss',

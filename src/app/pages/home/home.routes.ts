@@ -17,11 +17,11 @@ const routes: Routes = [
           ),
       },
       {
-        path: 'view:id',
+        path: 'product/:filter',
         pathMatch: 'full',
         loadComponent: () =>
-          import('./home-landing/home-landing.component').then(
-            (c) => c.HomeLandingComponent,
+          import('./home-view/home-view.component').then(
+            (c) => c.HomeViewComponent,
           ),
       },
     ],
